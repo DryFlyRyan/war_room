@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="war_room">
   <head>
     <meta charset="utf-8">
     <title>Galvanize War Room</title>
+
+    <link rel="stylesheet" href="/style/bootstrap.css">
+
+    <link rel="stylesheet" href="/style/main.css">
+    <!-- <base href="/" target="_blank"> -->
   </head>
   <body>
-    <h1>Test Title</h1>
+    <h1>Index</h1>
+    <main ui-view>
+
+    </main>
+    <footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+      <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.js" charset="utf-8"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+      <script src="js/ng-app.js" charset="utf-8"></script>
+      <script src="js/controllers.js" charset="utf-8"></script>
+      <script src="js/services.js" charset="utf-8"></script>
+    </footer>
   </body>
 </html>
