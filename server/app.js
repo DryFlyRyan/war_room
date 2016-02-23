@@ -4,7 +4,7 @@ var express = require('express');
 var socket = require('socket.io');
 var http = require('http');
 var unirest = require('unirest');
-var db = require('monk')(process.env.DB_CONNECTION)
+// var db = require('monk')(process.env.DB_CONNECTION)
 var warroom = require('./warroom-client')
 
 var app = express();
