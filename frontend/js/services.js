@@ -8,6 +8,7 @@ function serverInfoService($stateParams) {
   var callbacks = []
   console.log('state params = ',$stateParams);
   socket.on('serverInfo', function(data){
+    console.log(data);
     callbacks.forEach(function(callback){
       callback(data.body)
     })
