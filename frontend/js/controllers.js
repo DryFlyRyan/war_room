@@ -12,6 +12,10 @@ function dashboardController($scope, serverInfoService) {
     // console.log($scope.servers);
     $scope.$apply()
   })
+  $scope.caution = 0.05;
+  $scope.warning = 0.5;
+
+
 }
 
 serverController.$inject = ['$scope', '$stateParams', 'serverInfoService']

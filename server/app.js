@@ -48,7 +48,7 @@ io.on('connection', function(socket){
         }
       }
     }
-    console.log(data.data);
+    // console.log(data.data);
     socket.emit('serverInfo',{
       body: data.data
     })

@@ -4,8 +4,23 @@
 <div class="main-container col-md-12" ng-repeat="server in servers">
   <a href="/server/{{server.id}}">
     <div class="server-card col-md-10 col-md-offset-1">
-      <h1>{{server.name}}</h1>
-      <h2>{{server.responseTime}}</h2>
+      <div class="stats-window col-md-7">
+        <h1>Name: {{server.name}}</h1>
+        <h2>ID: {{server.id}}</h2>
+        <h2>Live Response Time: {{server.responseTime * 1000 | number:0}} ms</h2>
+      </div>
+      <div class="status-window flexColCenter col-md-5">
+        <div class="light-container flexRowEnd col-md-12">
+          <h2 class='light-label'>Server Status</h2>
+          <div class="status-light" ng-class="{'green': server.responseTime <= caution, 'yellow': server.responseTime > caution && server.responseTime < warning , 'red': server.responseTime >= warning }">
+          </div>
+        </div>
+        <div class="light-container flexRowEnd col-md-12">
+          <h2 class='light-label'>Avg. Status</h2>
+          <div class="status-light" ng-class="{'green': server.average <= caution, 'yellow': server.average > caution && server.average < warning , 'red': server.average >= warning }">
+          </div>
+        </div>
+      </div>
     </div>
   </a>
 </div>
