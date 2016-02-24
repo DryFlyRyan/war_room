@@ -7,13 +7,13 @@ html, body {
   height: 100vh;
   width: 100vw;
   font-family: digital;
-  color: rgb(60,60,60);
+  color: rgb(25,121,59);
 }
 
 a,
 a:hover,
 a:visited {
-  color: rgb(60,60,60);
+  color: rgb(25,121,59);
   text-decoration: none;
 }
 
@@ -21,10 +21,18 @@ a:visited {
 nav {
   height: 70px;
   width: 100vw;
-  background: rgba(150,150,150, .8);
+  background: rgb(42,52,44);
   margin-top: 10px;
   margin-bottom: 15px;
 }
+
+input,
+label,
+button {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 
 /* Flexy Stuff */
 
@@ -79,6 +87,7 @@ nav {
   /*border-radius: 20px;*/
   margin-top: 5px;
   margin-bottom: 5px;
+  background: rgb(42,52,44);
 }
 
 /* Element Styling */

@@ -7,9 +7,12 @@ var unirest = require('unirest');
 var db = require('monk')(process.env.MONGOLAB_URI)
 var warroom = require('./warroom-client')
 
+
 var app = express();
 var server = http.Server(app);
 var io = socket(server);
+
+var settings = require('./routes/settings')
 
 //Functions
 db.get('servers').drop();
@@ -32,6 +35,10 @@ function findAverage(targetArray) {
   })
   return serverArray;
 }
+
+// Routes
+
+app.use('/settings', settings)
 
 // Sockets
 

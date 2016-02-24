@@ -13,10 +13,12 @@ var app = angular.module("war_room", ['ui.router'])
     controller: 'serverController',
     url:'/server/:id'
   })
-  .state('testPage', {
-    templateUrl: 'partials/test.html',
-    url:'/dashboard/test'
+  .state('settings', {
+    templateUrl: 'partials/settings.html',
+    controller: 'settingsController',
+    url:'/settings'
   })
+
 
   $locationProvider.html5Mode(true);
 });
