@@ -1,15 +1,32 @@
-<div class="">
+<div class="col-md-10 col-md-offset-1 server-card">
   <div class="col-md-12">
-    <h3>ID: {{server.id}}</h3>
-    <h1 class="col-md-12">{{server.name}}</h1>
-    <h2 class="col-md-8">{{server.responseTime}}</h2>
-    <h2 class="col-md-8">{{server.average}}</h2>
+    <div class="col-md-8">
+      <h1>NAME: {{server.name}}</h1>
+      <h1 class="">ID: {{server.id}}</h1>
+
+    </div>
+    <div class="status-window flexColCenter col-md-4">
+      <div class="light-container flexRowEnd col-md-12">
+        <h2 class='light-label'>Server Status</h2>
+        <div class="status-light" ng-class="{'green': server.responseTime <= caution, 'yellow': server.responseTime > caution && server.responseTime < warning , 'red': server.responseTime >= warning }">
+        </div>
+      </div>
+      <div class="light-container flexRowEnd col-md-12">
+        <h2 class='light-label'>Avg. Status</h2>
+        <div class="status-light" ng-class="{'green': server.average <= caution, 'yellow': server.average > caution && server.average < warning , 'red': server.average >= warning }">
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="col-md-12">
-    <h3 class="col-md-6">OS: {{server.os}}</h3>
-    <h3 class="col-md-6">RAM: {{server.memory}}</h3>
+  <div class="col-md-8">
+    <h2 class="details-item-large">CURRENT RESPONSE TIME: {{server.responseTime * 1000 | number: 0}}MS</h2>
+    <h2 class="details-item-large">LEGACY RESPONSE TIME: {{server.average * 1000 | number: 0}}MS</h2>
   </div>
-  <div class="col-md-12">
-    <h3>TEMP: {{server.temp}}</h3>
+
+  <div class="col-md-3 flexColEnd">
+    <h4 class="details-item">OS: {{server.os}}</h3>
+    <h4 class="details-item">RAM: {{server.memory}}</h3>
+    <h4 class="details-item">TEMP: {{server.temp}}</h3>
   </div>
+
 </div>

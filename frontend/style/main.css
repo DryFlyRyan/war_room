@@ -44,6 +44,14 @@ nav {
   justify-content: flex-end;;
 }
 
+.flexColEnd {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  align-content: center;
+  justify-content: flex-end;
+}
+
 .flexRowApart {
   display: flex;
   flex-flow: row nowrap;
@@ -68,7 +76,7 @@ nav {
 
 .server-card {
   border: 3px solid rgb(90,90,90);
-  border-radius: 20px;
+  /*border-radius: 20px;*/
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -82,6 +90,16 @@ nav {
 
 .settings-button {
   font-size: 36pt;
+}
+
+.details-item {
+  line-height: 5px;
+  margin: 10px;
+}
+
+.details-item-large {
+  line-height: 10px;
+  margin: 20px;
 }
 
 .light-label {

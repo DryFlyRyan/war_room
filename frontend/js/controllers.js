@@ -32,4 +32,6 @@ function serverController($scope, $stateParams, serverInfoService) {
       }
     })
   })
+  $scope.caution = 0.05;
+  $scope.warning = 0.5;
 }
