@@ -33,18 +33,6 @@ function findAverage(targetArray) {
   return serverArray;
 }
 
-// warroom(function(error, data) {
-//   if (data) {
-//     newServerArray = [];
-//     data.data.forEach(function(server) {
-//       newServerArray.push(server);
-//     })
-//     console.log(newServerArray);
-//     formatDB(newServerArray);
-//   }
-// });
-
-
 // Sockets
 
 io.on('connection', function(socket){
@@ -66,22 +54,6 @@ io.on('connection', function(socket){
     })
   })
 })
-
-// io.on('connection', function(socket) {
-//   setInterval(function(){
-//     db.get('servers').find()
-//     .then(function(results){
-//       console.log(results);
-//       // var average = findAverage(serverList);
-//       console.log("making it here?")
-//       console.log('average: ',average)
-//       socket.emit('serverInfo', {
-//         body: newServerArray,
-//         average: average
-//       })
-//     })
-//   }, 1000)
-// })
 
 app.use(express.static('./frontend'));
 
